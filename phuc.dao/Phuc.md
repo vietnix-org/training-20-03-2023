@@ -1,0 +1,140 @@
+Heading 1 	Xem dung lượng disk
+
+Xem dung lượng ổ đĩa đã sử dụng
+![df](./Pictures/Screenshot%20from%202023-03-20%2014-09-10.png)
+Heading 2  Xem các phân vùng
+
+Xem phân vùng ổ đĩa sda,sdb
+![lsblk](./Pictures/Screenshot%20from%202023-03-20%2014-22-50.png)
+Heading 3 Xem cpu, ram, network
+
+Heading 3.1 Xem CPU 
+
+Kiểm tra thông số cpu
+![lscpu](./Pictures/Screenshot%20from%202023-03-20%2014-25-11.png)
+
+Heading 3.2 Xem RAM 
+
+Kiểm tra dung lượng và bộ nhớ RAM
+![lscpu](./Pictures/Screenshot%20from%202023-03-20%2014-34-24.png)
+
+Heading 3.3 Xem Card mạng(Network)
+
+Kiểm tra trạng thái dịch vụ Network
+![systemctl status NetworkManager.service](Pictures/Screenshot%20from%202023-03-20%2014-39-27.png)
+
+Kiểm tra trạng thái các card đang kết nối
+![nmcli dev status](Pictures/Screenshot%20from%202023-03-20%2014-40-00.png)
+
+Kiểm tra danh sách card mạng đang kết nối
+![nmcli connection show](Pictures/Screenshot%20from%202023-03-20%2014-41-05.png)
+
+Heading 4 Theo dõi chi tiết tiến trình
+
+Kiểm tra tiến trình đang hoạt động
+![top,htop](Pictures/Screenshot%20from%202023-03-20%2015-03-58.png)
+
+Kiểm tra thông số tíến trình
+![ps](Pictures/Screenshot%20from%202023-03-20%2015-05-27.png)
+
+Heading 5 Liệt kê danh sách file/thư mục
+
+Liệt kê tập tin/thư mục
+![ls](Pictures/Screenshot%20from%202023-03-20%2015-13-23.png)
+
+Liệt kê chi tiết quyền tập tin/thư mục
+![ll](Pictures/Screenshot%20from%202023-03-20%2015-13-39.png)
+
+Heading 6 Tìm kiếm, copy, di chuyển,... file/thư mục
+
+Copy file/thư mục
+![cp -r](Pictures/Screenshot%20from%202023-03-20%2015-19-39.png)
+
+Di chuyển file/thư mục
+![mv](Pictures/Screenshot%20from%202023-03-20%2015-22-34.png)
+
+Tìm kiếm file/thư mục
+![locate](Pictures/Screenshot%20from%202023-03-20%2015-28-16.png)
+
+![find](Pictures/Screenshot%20from%202023-03-20%2015-30-00.png)
+
+Heading 7 Phân quyền cơ bản và phân quyền nâng cao
+
+Phân quyền cơ bản, chỉ cho admin chỉnh sửa và truy cập
+![chmod -R](Pictures/Screenshot%20from%202023-03-20%2015-36-00.png)
+
+Phân quyền tập tin/thư mục thuộc nhóm
+![chpgrp](Pictures/Screenshot%20from%202023-03-20%2015-50-20.png)
+
+Heading 8 Làm quen với trình editor vim, vi,...
+
+Sử dụng vi và vim để truy cập trình editor
+![vi](Pictures/Screenshot%20from%202023-03-20%2015-55-26.png)
+
+![vim](Pictures/Screenshot%20from%202023-03-20%2015-56-09.png)
+
+Heading 9 Mount và Unmount
+
+Tạo Mount và Unmont
+![mkdir/mnt/sd(x),mount /dev/sdb1 /mnt/sd1,umount /mnt/sd1](Pictures/Screenshot%20from%202023-03-20%2016-02-30.png)
+
+Heading 10 Symbolic Links
+
+Tạo Symbolic Links
+![ln -s /đường dẫn tuyệt đối/ file name](Pictures/Screenshot%20from%202023-03-20%2016-11-32.png)
+
+Heading 11 Hard Links
+ 
+Tạo Hardlink thư mục/tập tin
+![ln (file gốc) (file đích)](Pictures/Screenshot%20from%202023-03-20%2016-26-25.png)
+
+Heading 12 Nén, giải nén
+
+Nén 
+![tar -zcf](Pictures/Screenshot%20from%202023-03-20%2016-31-21.png)
+
+Giải nén
+![tar -zxvf](Pictures/Screenshot%20from%202023-03-20%2016-32-08.png)
+
+Heading 13 Đo lượng băng thông sử dụng (traffic inbound, outbound)
+
+Kiểm tra lưu lượng hệ thống đang sử dụng
+![./vnstart](Pictures/Screenshot%20from%202023-03-20%2016-42-47.png)
+
+Kiểm tra lưu lượng sử dụng trong giờ
+![./vnstart -h](Pictures/Screenshot%20from%202023-03-20%2016-43-02.png)
+
+Kiểm tra lưu lượng sử dụng trong ngày
+![./vnstart -d](Pictures/Screenshot%20from%202023-03-20%2016-43-10.png)
+
+Kiểm tra lưu lượng sử dụng cao nhất
+![./vnstart -t](Pictures/Screenshot%20from%202023-03-20%2016-43-18.png)
+
+Thống kê lưu lượng theo thời gian thực
+![./vnstart -l](Pictures/Screenshot%20from%202023-03-20%2016-49-16.png)
+
+Heading 14 nmap, telnet, ping, ssh, copy file/thư mục từ local đến public host 
+
+Sử dụng Nmap quét nhanh
+![nmap -F target IP](Pictures/Screenshot%20from%202023-03-20%2017-08-35.png)
+
+Sử dụng telnet
+![telnet ip, port](Pictures/Screenshot%20from%202023-03-20%2017-13-26.png)
+
+Ping 
+![ping IP](Pictures/Screenshot%20from%202023-03-20%2017-15-11.png)
+
+Sử dụng ssh 
+![ssh IP](Pictures/Screenshot%20from%202023-03-20%2017-23-39.png)
+
+Heading 15 SSH gen key
+
+Tạo SSH gen key connection server SSH
+![ls -l ~/.ssh/id_*.pub](Pictures/Screenshot%20from%202023-03-21%2009-43-37.png)
+![ssh-keygen](Pictures/Screenshot%20from%202023-03-21%2009-44-39.png)
+![ssh-copy-id username@IP server](Pictures/Screenshot%20from%202023-03-21%2009-45-38.png)
+
+Heading 16 Xem file không dùng Editor
+
+Sử dụng Head và Tail để xem file
+![head,tail file name](Pictures/Screenshot%20from%202023-03-21%2009-51-59.png)
