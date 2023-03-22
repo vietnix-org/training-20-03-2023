@@ -113,10 +113,10 @@ sudo iptables -A INPUT -p ipx -s IPX_ADDRESS -d A.B.C.D --dport YYY -j DROP
 
 2. Cho phép/Chặn tất cả ip mới truy cập đến IP dest A.B.C.D port YYY:
 
-iptables -A INPUT -s Y.J.K.F -d A.B.C.D -p tcp --dport YYY -m ttl --ttl-eq 128,64 -m length --length-eq 1000 -j ACCEPT
+sudo iptables -A INPUT -s Y.J.K.F -d A.B.C.D -p tcp --dport YYY -m ttl --ttl-eq 128,64 -m length --length-eq 1000 -j ACCEPT
 
 
-iptables -A INPUT -s Y.J.K.F -d A.B.C.D -p tcp --dport YYY -m ttl --ttl-eq 128,64 -m length --length-eq 1000 -j DROP
+sudo iptables -A INPUT -s Y.J.K.F -d A.B.C.D -p tcp --dport YYY -m ttl --ttl-eq 128,64 -m length --length-eq 1000 -j DROP
 
 ### 3. Đặt comment cho 1 iptables rules bất kỳ
 
