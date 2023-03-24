@@ -1241,7 +1241,11 @@ Sai số chuẩn (SE) là một thuật ngữ thống kê đo lường độ ch�
 
 Heading 20 Redirecting Standard Output,Redireacting Standard Error
 
-Một chương trình chạy trên Linux sẽ gửi đầu ra vào một file đặc biệt là stdout (standard output) và error messages đến stderr (standard error). Hai file này được link đến màn hình và không được save lại trong file.Rediretion cho phép chúng ta thay đổi nơi output ra và nơi input đến.Thay vì xuất ra màn hình (terminal), output có thể ghi vào tập tin, hoặc truyền cho process khác xử lý tiếp,Thay vì xuất thông tin lỗi ra màn hình, thì chuyển hướng lỗi giúp xuất thông tin lỗi ra tệp tin.
+Khi ký hiệu > tên tệp được thêm vào cuối lệnh, đầu ra của lệnh được ghi vào tên tệp đã chỉ định. Ký hiệu > được gọi là toán tử chuyển hướng đầu ra.
+
+Khi ký hiệu < tên tệp được thêm vào cuối lệnh, đầu vào của lệnh được đọc từ tên tệp đã chỉ định. Ký hiệu < được gọi là toán tử chuyển hướng đầu vào.
+
+Ngoài đầu vào tiêu chuẩn và đầu ra tiêu chuẩn, các lệnh thường tạo ra các loại đầu ra khác, chẳng hạn như thông báo lỗi hoặc trạng thái được gọi là đầu ra chẩn đoán. Giống như đầu ra tiêu chuẩn, đầu ra lỗi tiêu chuẩn được ghi vào màn hình trừ khi nó được chuyển hướng.
 
  /dev/null
 
