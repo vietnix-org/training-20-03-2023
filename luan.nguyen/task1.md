@@ -720,6 +720,69 @@ Building dependency tree... Done
 
 Reading state information... Done
 
+- Zip and Unzip
+
+root@lab:/home/bopiz/Downloads# tar -vczf tsetup.4.7.0.tar.xz file3.txt
+
+root@lab:/home/bopiz/Downloads# ls
+
+64bit.7z
+
+CentOS-7-x86_64-DVD-2207-02.iso
+
+CentOS-Stream-8-20230308.3-x86_64-boot.iso
+
+'code_1.76.2-1678817801_amd64(1).deb'
+
+code_1.76.2-1678817801_amd64.deb
+
+'google-chrome-stable_current_amd64(1).deb'
+
+google-chrome-stable_current_amd64.deb
+
+project.md
+
+'Telegram Desktop'
+
+tsetup.4.7.0.tar.xz
+
+ubuntu-22.04.2-live-server-amd64.iso
+
+virtualbox-7.0_7.0.6-155176_Ubuntu_jammy_amd64.deb
+
+'VMware-Player-15.1.0-13591040.x86_64_ttmt (1).bundle'
+
+VMware-Player-15.1.0-13591040.x86_64_ttmt.bundle
+
+VMware-Workstation-Full-17.0.0-20800274.x86_64.bundle
+
+wordpress-6.1.1.tar.gz
+
+---
+
+- Các lệnh - Đổ nội dung 1 chuỗi vào cuối file
+
+bopiz@lab:~/Desktop$ find -name test\*
+
+./test
+
+bopiz@lab:~/Desktop$ locate -b 'test.txt'
+
+/usr/share/doc/php-tcpdf/examples/data/utf8test.txt
+
+bopiz@lab:~$ which -a telegram-desktop
+
+/usr/bin/telegram-desktop
+
+/bin/telegram-desktop
+
+bopiz@lab:~$ whereis telegram-desktop
+
+telegram-desktop: /usr/bin/telegram-desktop /usr/share/man/man1/telegram-desktop.1.gz
+
+---
+
+
 bopiz@lab:~$ sudo ufw status verbose
 
 Status: inactive
@@ -797,6 +860,8 @@ The key's randomart image is:
 +----[SHA256]-----+
 
 ---
+
+find, grep, awk, sed, tr, head, tail, less, more, sort, uniq, cut, join, diff, xargs, traceroute, netstat, kill, pkill, wc, wget, git, rsyn, ping, tee, ln, mkdir
 
 bopiz@lab:~$ tall sample.txt
 
@@ -1119,6 +1184,49 @@ bopiz@lab:~$ echo "Welcome To The Geek Stuff" | sed 's/\(\b[A-Z]\)/\(\1\)/g'
 
 bopiz@lab:~$ sudo pam-auth-update
 
+ ---
+
+
+bopiz@lab:~/Desktop$ find -name filehinh\*
+
+ ./filehinh
+
+ bopiz@lab:~/Desktop/filehinh$  grep 'chan' filehinh.txt
+
+bopiz@lab:~/Desktop/filehinh$ cat filehinh.txt
+ 
+ bopiz@lab:~$ ps
+ 
+ 
+ PID TTY          TIME CMD
+ 
+ 662954 pts/1    00:00:00 bash
+ 
+ 739098 pts/1    00:00:00 ps
+
+bopiz@lab:~$ ps
+ 
+ PID TTY          TIME CMD
+ 
+ 662954 pts/1    00:00:00 bash
+ 
+ 739098 pts/1    00:00:00 ps
+ 
+ --
+
+bopiz@lab:~/Desktop$ mkdir demo_1
+ 
+
+ bopiz@lab:~/Desktop$ mkdir demo_2
+
+ bopiz@lab:~/Desktop$ mkdir demo_1/demo{1..4}
+
+ bopiz@lab:~/Desktop$ ls ./demo_1/
+
+ demo1  demo2  demo3  demo4
+
+ 
+ 
 ---
 
 Standard output
@@ -1136,6 +1244,9 @@ Heading 20 Redirecting Standard Output,Redireacting Standard Error
 Một chương trình chạy trên Linux sẽ gửi đầu ra vào một file đặc biệt là stdout (standard output) và error messages đến stderr (standard error). Hai file này được link đến màn hình và không được save lại trong file.Rediretion cho phép chúng ta thay đổi nơi output ra và nơi input đến.Thay vì xuất ra màn hình (terminal), output có thể ghi vào tập tin, hoặc truyền cho process khác xử lý tiếp,Thay vì xuất thông tin lỗi ra màn hình, thì chuyển hướng lỗi giúp xuất thông tin lỗi ra tệp tin.
 
  /dev/null
+
+ bopiz@lab:~/Desktop$ grep -r power /sys 2>/dev/null
+
 
   là một file thiết bị ảo. Đối với các chương trình có liên quan, chúng được coi như những file thực sự. Các tiện ích có thể yêu cầu dữ liệu từ loại nguồn này và hệ điều hành sẽ cung cấp dữ liệu cho chúng. Nhưng, thay vì đọc từ ổ đĩa, hệ điều hành sẽ tạo ra dữ liệu này một cách linh hoạt.
 
