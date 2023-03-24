@@ -3,41 +3,53 @@
 1 SSL 
 --
 SSL là gì
-SSL là viết tắt của cụm từ Secure Socket Layer.SSL là tiêu chuẩn của công nghệ bảo mật truyền thông mã hóa giữa mấy chủ Web server và trình duyệt,Tiêu chuẩn này đảm bảo rằng hoạt động của các dữ liệu truyền tải của các máy chủ và trình duyệt của người dùng đều được riêng tư và được bảo mật.SSL hiện là tiêu chuẩn bảo mật cho hầu hết các website trên toàn thế giới và đảm bảo được bảo vệ được dữ liệu truyền đi trên môi trường internet được an toàn.
+SSL là một giao thức bảo mật được phát triển để gửi thông tin an toàn qua Internet. Nhiều trang web sử dụng SSL cho các khu vực an toàn trên trang web của họ, chẳng hạn như trang tài khoản người dùng và thanh toán trực tuyến
 
-SSL đảm bảo tất cả các dữ liệu truyền đi từ máy chủ và trình duyệt đều được riêng tư,tách rời. 
+Các loại SSL:
 
+Xác thực tên miền – DV SSL: kiểm tra quyền của người đăng ký sử dụng một tên miền cụ thể.
 
-2 Một số định nghĩa trong và một số thuật ngữ SSL .
+Xác thực tổ chức – OV SSL: kiểm tra quyền của người đăng ký sử dụng một tên miền cụ thể CỘNG VỚI nó tiến hành một số kiểm tra của tổ chức.
 
-Certificate Authority (CA) 
+Xác thực mở rộng – EV SSL: kiểm tra quyền của người đăng ký sử dụng một tên miền cụ thể cộng với, nó tiến hành kiểm tra kỹ lưỡng tổ chức.
 
-CA là tổ chức phát hành các chứng thực các loại chứng thư số cho người dùng,doanh nghiệp,máy chủ(server),mã code,phần mềm.Nhà cung cấp chứng thực số đóng vai trò là bên thứ ba để hỗ trợ cho quá trình trao đôi thông tin an toàn 
+Các thành phần của SSL
 
-Một số  chứng chỉ
-- Domain Validation (DV SSL)
+CSR (Yêu cầu ký chứng chỉ):
 
-Chứng chỉ xác thực tên miền (Domain Validation SSL) đây là dịch vụ dành cho cá nhân với khả năng mã hóa cơ bản.Chỉ yêu cầu xác minh quyền sở hữu tên miền và thực hiện xác minh nhanh gọn
+CRT (Certificate): thành phần sau khi CSR được xác nhận và trả lại cho thuê bao
 
-- Organization Validation (OV SSL)
+Khóa riêng: một tệp được mã hóa được tạo cùng lúc khi tạo CSR
 
-Organization Validation SSL là chứng chỉ xác thực dành cho các tổ chức và doanh nghiệp có độ tin cậy cao. Việc xác thực bao gồm việc xác minh quyền sở hữu tên miền, xác minh doanh nghiệp đăng ký đang tồn tại và hoạt động bình thường. Với loại OV SSL này, tên doanh nghiệp của bạn cũng sẽ được hiển thị chi tiết trên chứng chỉ OV được cấp
+CA (Certificate Authority hoặc Certification Authority): Cơ quan cung cấp thông tin về chứng chỉ SSL
 
-- Extended Validation -EV SSL 
+SSL hoạt động như thế nào
 
-Extended Validation SSL là loại chứng chỉ xác thực mở rộng, có độ tin cậy cao nhất thường được sử dụng cho các doanh nghiệp và tổ chức đang hoạt động. Chứng chỉ này tuân thủ nghiêm ngặt các quy định của tổ chức CA trong quá trình xác minh doanh nghiệp. Khi bạn truy cập vào Internet và vào website sẽ thấy chứng chỉ EV trên thanh địa chỉ của browser xuất hiện màu xanh lá cây và đồng thời sẽ xuất hiện tên doanh nghiệp sở hữu website đó. Đây là yếu tố giúp tăng độ tin cậy đối với người dùng khi truy cập vào website của doanh nghiệp bạn.
+Người dùng kết nối phù hợp với dịch vụ hỗ trợ SSL
 
-- Wildcard SSL Certificate – Wildcard SSL
+Ứng dụng của người dùng yêu cầu khóa chung của máy chủ để đổi lấy khóa chung của chính nó.
 
-Wildcard SSL Certificate dành cho các website có nhu cầu sử dụng SSL cho nhiều subdomain khác nhau. Đặc biệt, Wildcard SSL Certificate khác với các loại SSL thông thường là có thể chạy cho nhiều subdomain khác nhau và không bị giới hạn và chỉ cần một chứng chỉ SSL duy nhất.
- 
-- Subject Alternative Names – SANs SSL
+khi người dùng gửi tin nhắn đến máy chủ, ứng dụng sẽ sử dụng máy chủ của khóa pulic để mã hóa tin nhắn
 
-Đây là loại chứng chỉ được thiết kế cho các ứng dụng Communication của Microsoft Exchange Server, Microsoft Office Communications, Lync và cũng là giải pháp tiết kiệm cho Web Hosting và QA Testing.
+Máy chủ nhận người dùng của tin nhắn và giải mã nó bằng cách sử dụng máy chủ của khóa 
 
 ### DOMAIN Là gì 
 
-Domain, hay còn được gọi là tên miền, được biết đến là địa chỉ của trang web. Chúng ta có thể dễ dàng thấy domain tại thanh URL của trình duyệt để truy cập vào website muốn. Có thể hiểu một cách đơn giản, nếu website được xem là một ngôi nhà thì tên miền chính là địa chỉ của ngôi nhà đó.
+Tên miền là địa chỉ của trang web đang hoạt động trên Internet. Một nơi mà mọi người sử dụng để tìm kiếm trên trình duyệt để truy cập bất kỳ trang web nào. Tên miền được biểu thị bằng các chữ cái hoặc số trong bảng chữ cái thay vì địa chỉ IP của máy chủ.
+
+Các loại tên miền
+
+TLD: tên miền cấp cao nhất là phần cuối cùng sau dấu chấm của tên miền và là phần mở rộng tên miền được liệt kê ở cấp cao nhất trong DNS. Ví dụ: .com, .org, .net và .vn
+
+ccTLD: là các tên miền được sử dụng ở một quốc gia cụ thể theo mã ISO. Ví dụ: .vn(Việt Nam), .es(Hoa Kỳ), ....
+
+gTLD: là tên miền thông dụng và được sử dụng trên toàn thế giới không phân biệt mã quốc gia nào. Ví dụ: .com, .net, .biz, ...
+
+sTLD: là các tên miền cấp cao nhất được giới hạn cho các tổ chức chính phủ. Ví dụ .gov, .mil, .edu, ...
+
+uTLD: tên miền cấp cao nhất như: .biz, .pro, .name, .info.
+
+iTLD: là miền .arpa đại diện cho ARPA và dành riêng cho ICANN để giải quyết các vấn đề về cơ sở hạ tầng.
 
 ### DNS là gì 
 
@@ -62,38 +74,55 @@ DNS viết tắt của Domain Name System có nghĩa là hệ thống phân gi�
 - HOSTING
 
 
-Hosting còn được gọi là Web Hosting là một dịch vụ giúp trang web hay ứng dụng web của bạn có thể truy cập được trên Internet, thông qua việc đóng vai trò là nơi lưu trữ các dữ liệu của website. Đây là yếu tố quan trọng thiết yếu để có thể xây dựng website và giúp nó hoạt động.
+Lưu trữ web là dịch vụ cho phép các tổ chức, cá nhân đưa một trang web hoặc trang web lên Internet.
 
+Các loại máy chủ:
 
-Hosting được cung cấp bởi các công ty cung cấp giải pháp lưu trữ web và thông thường khi mua các gói hosting từ các nhà cung cấp dịch vụ lưu trữ web, số tiền bạn bỏ ra chính là số tiền bạn thuê không gian máy chủ của họ để lưu trữ website của bạn, chẳng hạn như các tệp HTML, CSS, văn bản, hình ảnh hoặc các tài liệu khác.
+Chia sẻ lưu trữ là giải pháp cho chủ sở hữu trang web với các trang web lưu lượng truy cập thấp hơn.
+
+Lưu trữ chuyên dụng bạn thuê toàn bộ máy chủ vật lý cho doanh nghiệp của mình.
+
+VPS hosting (Máy chủ riêng ảo) Một máy chủ vật lý được cài đặt ứng dụng ảo hóa để tạo ra nhiều máy chủ ảo.
+
+Cloud hosting là dịch vụ lưu trữ hoạt động trên nền tảng điện toán đám mây
 
 - VPS 
 
-VPS là viết tắt của Virtual Private Server hay còn gọi là máy chủ riêng ảo. VPS được tạo ra bằng phương pháp phân chia một máy chủ vật lý thành nhiều máy chủ khác nhau có tính năng tương tự như một máy chủ riêng chạy dưới dạng chia sẻ tài nguyên từ máy chủ vật lý ban đầu đó.
+VPS(Virtual Private Server): là máy chủ ảo, được tạo ra bằng cách chia nhỏ máy chủ vật lý thành nhiều máy chủ khác.
 
-Mỗi gói VPS là một hệ thống hoàn toàn riêng biệt, có CPU, RAM, dung lượng ổ HDD, địa chỉ IP và hệ điều hành riêng biệt. Vì vậy người dùng có toàn quyền quản trị root và có thể restart lại hệ thống bất cứ lúc nào. 
-
-VPS thường được lựa chọn bởi các chủ sở hữu website có lưu lượng truy cập khá cao. Mức trung bình của lưu lượng truy cập vượt quá giới hạn của gói shared hosting. 
-
-Hiện nay, công nghệ mới nhất trong lĩnh vực VPS và đang được phát triển nhanh chóng là VPS NVMe. VPS NVMe ra đời nhằm giải quyết vấn đề về tốc độ đọc/ghi dữ liệu của VPS thông thường, ổ đĩa NVMe đã nhanh chóng trở thành một giải pháp hiệu quả cho việc tăng cường hiệu suất VPS.
+VPS được tạo ra bằng công nghệ ảo hóa thay vì sử dụng phần mềm quản lý thông thường (hosting control panel) để quản lý.
 
 - SERVER
 
-Đầu tiên, hãy tìm hiểu server nghĩa là gì? Máy chủ hay còn được gọi là Server là máy tính được liên kết với Internet hoặc mạng máy tính, có địa chỉ IP tĩnh, năng lực xử lý lớn. Máy chủ server là nơi mà mọi người cài đặt phần mềm trên đó để cho phép các máy tính khác truy cập vào và yêu cầu cung cấp các dịch vụ và tài nguyên. 
+server là một chương trình hoặc thiết bị máy tính cung cấp dịch vụ cho một chương trình máy tính khác và người dùng của nó, còn được gọi là máy khách. Trong một trung tâm dữ liệu, máy tính vật lý mà chương trình máy chủ chạy trên đó cũng thường được gọi là máy chủ. Máy đó có thể là một máy chủ chuyên dụng hoặc nó có thể được sử dụng cho các mục đích khác.
 
-Nếu chưa rõ máy chủ server là gì thì bạn có thể hiểu một cách đơn giản, máy chủ Server là một chiếc máy tính với nhiều tính năng vượt trội có khả năng xử lý và lưu trữ dữ liệu lớn hơn rất nhiều so với một chiếc máy tính bình thường. 
+Các loại máy chủ:
+
+Mail server: Hỗ trợ gửi và nhận mail (gmail, yahoo mail, yandex, dịch vụ email của amazon).
+
+Web server: là máy chủ có chức năng lưu trữ thông tin, dữ liệu của website, tạo môi trường kết nối để khách hàng truy cập website dễ dàng.
+
+server proxy: Máy chủ proxy đóng vai trò là cầu nối giữa máy chủ lưu trữ và máy chủ khách. Một proxy gửi dữ liệu từ một trang web đến địa chỉ IP máy tính của bạn sau khi nó đi qua máy chủ của proxy.
+
+File transfer protocol (FTP): Máy chủ FTP được sử dụng để di chuyển tệp từ máy tính này sang máy tính khác.
+
+Database server: Là máy chủ chuyên dụng dùng để quản trị cơ sở dữ liệu. Trên máy chủ được cài đặt các phần mềm quản trị cơ sở dữ liệu chuyên nghiệp: SQL server, MySQL, Oracle...
+
+File server: Một máy chủ tệp lưu trữ các tệp dữ liệu cho nhiều người dùng. Chúng cho phép truy xuất dữ liệu nhanh hơn và lưu hoặc ghi tệp vào máy tính.
 
 ### Reverse proxy,nguyen ly hoat dong 
 
-Trong hệ thống mạng internet, reverse proxy là một loại proxy server phổ biến có thể truy cập từ mạng công cộng. Các trang web lớn và CDN sử dụng reverse proxy – cùng với các kỹ thuật khác để cân bằng tải giữa các internal server. Các reverse proxy có thể giữ một bộ nhớ cache của static content. Điều này giúp giảm tải trên các internal server này và internal network. Các reverse proxy cũng thường thêm các tính năng như nén hoặc mã hóa TLS vào kênh giao tiếp giữa client và reverse proxy.
+Proxy đảo ngược là một loại máy chủ proxy phổ biến có thể truy cập được từ mạng công cộng. Các trang web và CDN lớn sử dụng proxy ngược – cùng với các kỹ thuật khác để cân bằng tải giữa các máy chủ nội bộ. Proxy đảo ngược có thể giữ một bộ đệm nội dung tĩnh. Điều này làm giảm tải cho các máy chủ nội bộ này và mạng nội bộ. Reverse proxy cũng thường thêm các tính năng như nén hoặc mã hóa TLS vào kênh liên lạc giữa máy khách và proxy ngược.
 
-Các reverse proxy thường được sở hữu hoặc quản lý bởi dịch vụ web và chúng được các client truy cập từ internet. Ngược lại, forward proxy thường được quản lý bởi một client (hoặc công ty). Client này bị hạn chế trong internal network, private network. Tuy nhiên client có thể yêu cầu forward proxy thay mặt client truy xuất tài nguyên từ internet công cộng.
+Máy chủ proxy là máy chủ trung gian chuyển tiếp các yêu cầu về nội dung từ nhiều máy khách đến các máy chủ khác nhau trên Internet.
 
-Bảo mật: Bằng cách chặn các yêu cầu được gửi đến máy chủ phụ trợ của bạn, reverse proxy server sẽ bảo vệ danh tính của chúng ta và hoạt động như một biện pháp bảo vệ để chống lại các cuộc tấn công bảo mật. Với reverse proxy server thì một trang web hoặc một dịch vụ sẽ không bao giờ tiết lộ địa chỉ IP của các server gốc. Điều này làm cho những cuộc tấn công có thể khó thực hiện.
+Nguyên tắc làm việc của Reverse proxy:
 
-Cân bằng tải: Đối với một trang web phổ biến thì hàng ngày sẽ có hàng triệu người dùng truy cập và nó có thể không thể xử lý tất cả lưu lượng truy cập đến bằng một máy chủ duy nhất. Vì vậy, trang web nên được phân phối giữa một nhóm các máy chủ khác nhau và tất cả chúng đều xử lý các yêu cầu cho cùng một trang web. Trong trường hợp này, reverse proxy có thể cung cấp giải pháp cân bằng tải sẽ phân phối đồng đều lưu lượng đến giữa các máy chủ khác nhau để ngăn việc một số máy chủ có thể bị quá tải do chịu nhiều yêu cầu cùng lúc. Còn trong trường hợp một máy chủ bị lỗi hoàn toàn thì các máy chủ khác cũng có thể xử lý lưu lượng. Reverse proxy server ở trước các máy chủ phụ trợ của bạn và phân phối các yêu cầu của client trên một nhóm máy chủ theo cách tối đa hóa tốc độ và sử dụng dung lượng trong khi đảm bảo không có máy chủ nào bị quá tải.
+Nhận yêu cầu kết nối từ người dùng
 
-Tăng tốc độ trang web: Reverse proxy server có thể nén dữ liệu gửi đến và gửi đi, cũng như lưu vào bộ nhớ cache các nội dung thường xuyên được yêu cầu, cả hai sẽ làm tăng tốc luồng lưu lượng giữa client và server. Ngoài ra nó cũng có thể thực hiện một số tác vụ bổ sung như mã hóa SSL để giảm tải các máy chủ web của bạn, do đó mà hiệu suất cũng được tăng lên.
+Thực hiện bắt tay ba bước TCP
+
+Kết nối với máy chủ gốc và chuyển tiếp yêu cầu ban đầu
 
 ## Vhost là gì 
 
@@ -125,37 +154,31 @@ Name Based
 
 - Ngix
 
-Nginx là một máy chủ mã nguồn mở nổi tiếng. Khi mới ra đời, Nginx được dùng để phục vụ web HTTP. Tuy nhiên, hiện nay nó được dùng để làm Reverse Proxy, Email Proxy (IMAP, POP3, SMTP) và và một trình cân bằng tải (load balancer) và proxy ngược (reverse proxy) cho các máy chủ HTTP, TCP và UDP.
+Nginx: cũng có thể được sử dụng như một máy chủ proxy ngược để sửa đổi yêu cầu từ máy khách và gửi yêu cầu đến máy chủ proxy
 
 
 - Apache Apache 
 
-(chương trình máy chủ HTTP) có tên đầy đủ là Apache HTTP Server. Đây là một server mã nguồn mở miễn phí và được sử dụng phổ biến hiện nay. Apache server được hệ thống Apache Software Foundation phát triển và điều hành. Mọi yêu cầu sẽ được gửi đến server qua phương thức HTTP. Nếu sử dụng Apache, bạn chỉ cần thao tác đơn giản là nhập URL hoặc địa chỉ IP và ấn Enter. Server sẽ tiếp nhận URL hay địa chỉ IP mà bạn đã nhập.
-Cũng giống như Nginx, Apache là chương trình máy chủ HTTP là một chương trình dành cho máy chủ đối thoại qua giao thức HTTP. Apache chạy trên các hệ điều hành tương tự như Unix, Microsoft Windows, Novell Netware và các hệ điều hành khác.
-
-
- Khi được phát hành lần đầu, Apache là chương trình máy chủ mã nguồn mở duy nhất có khả năng cạnh tranh với chương trình máy chủ tương tự của Sun Java System Web Server. Từ đó trở đi, Apache đã không ngừng tiến triển và trở thành một phần mềm có sức cạnh tranh mạnh so với các chương trình máy chủ khác về mặt hiệu suất và tính năng phong phú.
+là "Máy chủ HTTP Apache". Nó là một phần mềm máy chủ web hiệu suất cao, mã nguồn mở được phát triển và duy trì bởi Apache Software Foundation. Apache được thiết kế để tạo ra một máy chủ web cấp thương mại an toàn, mạnh mẽ và hiệu quả phù hợp với các tiêu chuẩn HTTP hiện hành.
 
  ### So sánh Nginx và Apache
 
- - Web tĩnh
-
- Nginx nhanh hơn 2,5 lần Apache dựa trên một thử nghiệm kiểm chuẩn chạy tới 1000 kết nối đồng thời.
-
- Trong một thử nghiệm khác với 512 kết nối đồng thời, Nginx nhanh hơn khoảng 2 lần và và tiêu thụ ít bộ nhớ hơn (4%).
- - web động
-
- Nếu bạn đã có một trang web động bằng WordPress, Joomla, Drupal, ... bạn có thể cân nhắc sử dụng NGINX hoặc Apache. Nội dung tĩnh trong các tình huống này ít hơn rất nhiều so với nội dung động.
-
- Một lần nữa xem xét các bài kiểm tra điểm chuẩn của Speedemy và kết quả hoàn toàn giống nhau. Trong trường hợp này không có sự vượt trội so với NGINX. Tại sao lại như vậy? Hầu hết các request đang xử lý trong PHP runtime environment khá giống nhau cho cả hai web server.
+ - apache:
  
- - Hệ điều hành hỗ trợ
+Apache là một máy chủ web mã nguồn mở.
 
-Apache hoạt động trên tất cả các loại hệ thống Unix-like (Linux hoặc BSD) và hỗ trợ đầy đủ cho Microsoft Windows
+Một luồng đơn chỉ có thể xử lý một kết nối.
 
-Nginx cũng chạy trên một vài hệ thống trong số chúng và cũng hỗ trợ Window tuy nhiên hiệu suất không được mạnh bằng.
+Hiệu suất của Apache đối với nội dung tĩnh thấp hơn Nginx.
 
- - Bảo mật
+Apache được viết bằng C và XML.
 
- Cả Nginx và Apache đều rất coi trọng tính bảo mật trên trang web của mình. Không có hệ thống mạnh mẽ nào mà lại không có những biện pháp đối phó với các cuộc tấn công DDoS, phần mềm độc hại và phishing. Cả hai máy chủ này định kỳ phát hành báo cáo bảo mật và những tư vấn, đảm bảo rằng khía cạnh bảo mật được tăng cường ở mọi cấp độ.
- 
+- Nginx
+
+Nginx cũng được sử dụng như một máy chủ proxy ngược để sửa lại yêu cầu từ máy khách và gửi yêu cầu đến máy chủ proxy.
+
+Một luồng duy nhất có thể xử lý nhiều kết nối
+
+Nginx chạy nhanh hơn Apache và sử dụng ít bộ nhớ hơn
+
+Nginx được viết bằng ngôn ngữ C.
