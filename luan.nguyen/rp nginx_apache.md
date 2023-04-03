@@ -188,3 +188,75 @@ bopiz@lab:~$sudo nginx -t
 bopiz@lab:~$sudo service nginx reload
 
 bopiz@lab:~$sudo tail -f /var/log/apache2/other_vhosts_access.log
+
+source wordpress,laravel
+
+Install wordpress and laravel on apache2
+
+Creat user and database for wordpress
+
+Log in Mariadb server: mysql -u root -p
+
+CREATE DATABASE wordpress;
+
+GRANT ALL PRIVILEGES on wordpress.* to 'luan'@'localhost' identified by 'minhluan';
+
+FLUSH PRIVILEGES;
+
+exit;
+
+Install wordpress
+
+bopiz@lab:/tmp$ curl -O https://wordpress.org/latest.tar.gz
+
+bopiz@lab:/tmp$ tar xzvf latest.tar.gz
+
+bopiz@lab: sudo nano wp-example-config.php
+
+sudo systemctl restart mysql
+
+sudo systemctl restart apache2
+
+set up virtual host for wordpress root@lab:/# sudo nano /etc/apache2/sites-available/wordpress.conf
+
+sudo nano /etc/apache2/sites-available/wordpress.conf
+
+bopiz@lab:/$ sudo ln -s /etc/apache2/site-available/wordpress.conf /etc/apache2/site-enabled
+
+![](src/11.png)
+
+The first installl composer
+
+curl -sS https://getcomposer.org/installer | php
+
+sudo mv composer.phar /usr/local/bin/composer
+
+sudo chmod +x /usr/local/bin/composer
+
+After install composer successful, get install laravel by composer
+
+composer create-project --prefer-dist laravel/laravel laravel
+
+Set up and install laravel creat APP_KEY for project Laravel
+
+sudo php artisan key:generate
+
+Create user and databse for laravel
+
+This is the same as config and create database for wordpress
+
+Log in Mariadb server: mysql -u root -p
+
+bopiz@lab:mysql -u root -p
+
+Create user and database for wordpress follow command line:
+
+CREATE DATABASE laravel;
+
+GRANT ALL PRIVILEGES on laravel.* to 'user'@'localhost' identified by 'minhluan';
+
+FLUSH PRIVILEGES;
+
+exit;
+
+![](src/photo_2023-03-28_14-25-30.jpg)
