@@ -191,7 +191,9 @@ bopiz@lab:~$sudo tail -f /var/log/apache2/other_vhosts_access.log
 
 source wordpress,laravel
 
-Install wordpress and laravel on apache2
+---
+
+- Install wordpress and laravel!!!
 
 Creat user and database for wordpress
 
