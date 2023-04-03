@@ -195,6 +195,8 @@ source wordpress,laravel
 
 - Install wordpress and laravel!!!
 
+- source wordpress!!! 
+
 Creat user and database for wordpress
 
 Log in Mariadb server: mysql -u root -p
@@ -226,6 +228,8 @@ sudo nano /etc/apache2/sites-available/wordpress.conf
 bopiz@lab:/$ sudo ln -s /etc/apache2/site-available/wordpress.conf /etc/apache2/site-enabled
 
 ![](src/11.png)
+
+- source Laravel!!!
 
 The first installl composer
 
