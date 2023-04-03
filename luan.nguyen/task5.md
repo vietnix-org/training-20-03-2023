@@ -188,15 +188,17 @@ This is the same as config and create database for wordpress
 
 Log in Mariadb server: mysql -u root -p
 
+bopiz@lab:mysql -u root -p
+
 Create user and database for wordpress follow command line:
 
-CREATE DATABASE laravel
+CREATE DATABASE laravel;
 
 GRANT ALL PRIVILEGES on laravel.* to 'user'@'localhost' identified by 'minhluan';
 
 FLUSH PRIVILEGES;
 
-exit
+exit;
 
 ![](src/photo_2023-03-27_15-01-34.jpg)
 
