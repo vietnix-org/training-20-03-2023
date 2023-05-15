@@ -6,7 +6,7 @@ vietnixbot: /freeip 209
 
 Kiểm tra IP có sử dụng chưa: /arping IP tìm đc trong freeip
 
-Sau khi sau copy IP bỏ vào phần IP trên portal rồi enter để save
+Sau khi xong copy IP bỏ vào phần IP trên portal rồi enter để save
 
 B2: Đặt tên user 
 
